@@ -7,5 +7,7 @@ Libraries allowed
 * matplotlib
 
 TODO
-- [x] Start the library :) `11/29/22`
-- [] Create a basic computaional graph implementation
+- [x] Start the library :)
+- [x] Create a basic computaional graph implementation
+- [x] Compute gradients on computational graph
+- [ ] Create a linear regression example ?
