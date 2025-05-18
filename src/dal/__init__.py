@@ -1,1 +1,2 @@
-from variable import *
+from .variable import *
+

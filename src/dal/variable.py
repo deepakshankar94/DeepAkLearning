@@ -1,7 +1,7 @@
 from typing import Callable
 from functools import partial
 
-from backwardFunc import add_backward, sub_backward, mul_backward
+from .backwardFunc import add_backward, sub_backward, mul_backward
 
 class Variable():
     """Basic differentiable variable."""
@@ -38,14 +38,16 @@ class Variable():
     def backward(self):
         self.calc_grad(1)
 
-a = Variable(1)
-b = Variable(2)
-c = Variable(3,requires_grad=True)
-d = Variable(3,requires_grad=True)
-e = a*b + c*d
-target = Variable(12)
-L = target-e
-L.backward()
-print(e)
-print(c.grad)
-print(d.grad)
+if __name__ == "__main__":
+    a = Variable(1)
+    b = Variable(2)
+    c = Variable(3, requires_grad=True)
+    d = Variable(3, requires_grad=True)
+    e = a * b + c * d
+    target = Variable(12)
+    L = target - e
+    L.backward()
+    print(e)
+    print(c.grad)
+    print(d.grad)
+
